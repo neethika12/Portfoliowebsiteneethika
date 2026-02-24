@@ -1,18 +1,13 @@
 import { ArrowUpRight, Download, Mail, MapPin } from "lucide-react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { ContactForm } from "@/components/contact-form";
+import { HeroCanvasShell } from "@/components/hero-canvas-shell";
 import { PortfolioNav } from "@/components/portfolio-nav";
 import { SectionHeading } from "@/components/section-heading";
 import { SkillCloud } from "@/components/skill-cloud";
 import { navItems, portfolioData } from "@/data/portfolio-data";
-
-const HeroCanvas = dynamic(() => import("@/components/hero-canvas").then((module) => module.HeroCanvas), {
-  ssr: false,
-  loading: () => <div className="hero-canvas-placeholder" />,
-});
 
 export default function Home() {
   return (
@@ -74,7 +69,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <HeroCanvas />
+            <HeroCanvasShell />
           </div>
         </AnimatedSection>
 
