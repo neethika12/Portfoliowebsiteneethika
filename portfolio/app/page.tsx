@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 
 import { AnimatedSection } from "@/components/animated-section";
@@ -6,10 +6,14 @@ import { ContactForm } from "@/components/contact-form";
 import { HeroCanvasShell } from "@/components/hero-canvas-shell";
 import { PortfolioNav } from "@/components/portfolio-nav";
 import { SectionHeading } from "@/components/section-heading";
+import { SectionMetrics } from "@/components/section-metrics";
 import { SkillCloud } from "@/components/skill-cloud";
 import { navItems, portfolioData } from "@/data/portfolio-data";
 
 export default function Home() {
+  const frontendSkills = portfolioData.skills.groups.find((group) => group.title === "Frontend")?.skills ?? [];
+  const backendSkills = portfolioData.skills.groups.find((group) => group.title === "Backend")?.skills ?? [];
+
   return (
     <main className="relative overflow-x-clip bg-slate-950 text-slate-100">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.16),rgba(2,6,23,0.95)_36%)]" />
@@ -47,16 +51,25 @@ export default function Home() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 {portfolioData.basics.socialLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-sm text-slate-100 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
-                  >
-                    {link.label}
-                    <ArrowUpRight size={15} />
-                  </a>
+                  link.href ? (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-sm text-slate-100 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+                    >
+                      {link.label}
+                      <ArrowUpRight size={15} />
+                    </a>
+                  ) : (
+                    <span
+                      key={link.label}
+                      className="inline-flex items-center gap-1 rounded-full border border-dashed border-white/20 px-3 py-1.5 text-sm text-slate-300"
+                    >
+                      {link.label} (add URL)
+                    </span>
+                  )
                 ))}
               </div>
 
@@ -77,8 +90,9 @@ export default function Home() {
           <SectionHeading
             eyebrow="About"
             title="Professional Summary"
-            description="A concise overview of my technical approach, engineering values, and core strengths."
+            description="Focused on building reliable software systems with measurable outcomes in ML performance, backend stability, and automation efficiency."
           />
+          <SectionMetrics items={portfolioData.about.stats} />
           <div className="grid gap-6 md:grid-cols-[1.15fr_0.85fr]">
             <article className="glass-card rounded-2xl p-5 md:p-6">
               <div className="space-y-4 text-slate-300">
@@ -114,12 +128,11 @@ export default function Home() {
             title="Developer Skills"
             description="Technical capability across frontend, backend, cloud workflows, and applied engineering tools."
           />
+          <SectionMetrics items={portfolioData.skills.stats} />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <SkillCloud title="Frontend" skills={portfolioData.skills.frontend} />
-            <SkillCloud title="Backend" skills={portfolioData.skills.backend} />
-            <SkillCloud title="Cloud & DevOps" skills={portfolioData.skills.cloudAndDevOps} />
-            <SkillCloud title="Languages" skills={portfolioData.skills.languages} />
-            <SkillCloud title="Tools" skills={portfolioData.skills.tools} />
+            {portfolioData.skills.groups.map((group) => (
+              <SkillCloud key={group.title} title={group.title} skills={group.skills} />
+            ))}
           </div>
         </AnimatedSection>
 
@@ -129,6 +142,7 @@ export default function Home() {
             title="Hands-on Engineering Experience"
             description="Roles and outcomes that demonstrate impact, ownership, and execution."
           />
+          <SectionMetrics items={portfolioData.experienceStats} />
           <div className="space-y-4">
             {portfolioData.experience.map((item) => (
               <article key={`${item.company}-${item.role}`} className="glass-card rounded-2xl p-5 md:p-6">
@@ -172,6 +186,7 @@ export default function Home() {
             title="Academic Foundation"
             description="Coursework, leadership, and milestones that strengthened my engineering depth."
           />
+          <SectionMetrics items={portfolioData.educationStats} />
           <div className="grid gap-4 md:grid-cols-2">
             {portfolioData.education.map((item) => (
               <article key={`${item.institution}-${item.degree}`} className="glass-card rounded-2xl p-5 md:p-6">
@@ -196,17 +211,35 @@ export default function Home() {
           <SectionHeading
             eyebrow="Selected Projects"
             title="Products and Platforms I Built"
-            description="A snapshot of engineering projects that combine usability, architecture, and impact."
+            description="Project portfolio with measurable outcomes, systems depth, and implementation details."
           />
-          <div className="grid gap-4 md:grid-cols-3">
+          <SectionMetrics items={portfolioData.projectStats} />
+          <div className="grid gap-4 md:grid-cols-2">
             {portfolioData.projects.map((project) => (
               <article key={project.title} className="glass-card rounded-2xl p-5 md:p-6">
+                <Image
+                  src={project.imagePath}
+                  alt={`${project.title} preview`}
+                  width={960}
+                  height={600}
+                  className="mb-4 h-44 w-full rounded-xl border border-white/10 object-cover"
+                />
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="text-base font-semibold text-white">{project.title}</h3>
                   <span className="text-xs uppercase tracking-[0.2em] text-slate-400">{project.period}</span>
                 </div>
                 <p className="mt-3 text-sm text-slate-300">{project.description}</p>
                 <p className="mt-3 text-sm text-cyan-100">{project.impact}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.highlights.map((highlight) => (
+                    <span
+                      key={highlight}
+                      className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs text-cyan-100"
+                    >
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => (
                     <span
@@ -217,26 +250,32 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-cyan-200 hover:text-cyan-100"
-                  >
-                    Live Demo
-                    <ArrowUpRight size={14} />
-                  </a>
-                  <a
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-slate-300 hover:text-slate-100"
-                  >
-                    Source Code
-                    <ArrowUpRight size={14} />
-                  </a>
-                </div>
+                {project.liveUrl || project.repoUrl ? (
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-cyan-200 hover:text-cyan-100"
+                      >
+                        Live Demo
+                        <ArrowUpRight size={14} />
+                      </a>
+                    ) : null}
+                    {project.repoUrl ? (
+                      <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-slate-300 hover:text-slate-100"
+                      >
+                        Source Code
+                        <ArrowUpRight size={14} />
+                      </a>
+                    ) : null}
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>
@@ -246,9 +285,10 @@ export default function Home() {
           <SectionHeading
             eyebrow="Research Papers"
             title="Research and Technical Writing"
-            description="Papers and studies that highlight analytical thinking and experimentation."
+            description="Current publications and technical reports from coursework/research work."
           />
-          <div className="grid gap-4 md:grid-cols-3">
+          <SectionMetrics items={portfolioData.researchStats} />
+          <div className="grid gap-4 md:grid-cols-2">
             {portfolioData.researchPapers.map((paper) => (
               <article key={paper.title} className="glass-card rounded-2xl p-5 md:p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-cyan-200">
@@ -256,15 +296,21 @@ export default function Home() {
                 </p>
                 <h3 className="mt-2 text-base font-semibold text-white">{paper.title}</h3>
                 <p className="mt-3 text-sm text-slate-300">{paper.abstract}</p>
-                <a
-                  href={paper.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-1 text-sm text-cyan-200 hover:text-cyan-100"
-                >
-                  Read publication
-                  <ArrowUpRight size={14} />
-                </a>
+                {paper.url ? (
+                  <a
+                    href={paper.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center gap-1 text-sm text-cyan-200 hover:text-cyan-100"
+                  >
+                    Read publication
+                    <ArrowUpRight size={14} />
+                  </a>
+                ) : (
+                  <p className="mt-4 text-sm text-slate-400">
+                    Share publication links to display direct access here.
+                  </p>
+                )}
               </article>
             ))}
           </div>
@@ -276,6 +322,7 @@ export default function Home() {
             title="Download Resume"
             description="Keep your resume link ready for applications, recruiters, and LinkedIn profile sharing."
           />
+          <SectionMetrics items={portfolioData.resumeStats} />
           <article className="glass-card rounded-2xl p-5 md:p-6">
             <p className="text-slate-300">
               Download resume in different formats and keep this portfolio link as your unified technical profile.
@@ -307,11 +354,26 @@ export default function Home() {
               </p>
               <div className="mt-4 space-y-2 text-sm">
                 <p className="text-slate-200">Email: {portfolioData.basics.email}</p>
+                <p className="inline-flex items-center gap-2 text-slate-300">
+                  <Phone size={14} className="text-cyan-300" />
+                  {portfolioData.basics.phone}
+                </p>
                 <p className="text-slate-300">Location: {portfolioData.basics.location}</p>
               </div>
+              <div className="mt-5">
+                <h4 className="text-sm font-semibold text-slate-100">Certifications</h4>
+                <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                  {portfolioData.certifications.map((certification) => (
+                    <li key={certification} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                      <span>{certification}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className="mt-5 grid gap-3">
-                <SkillCloud title="Frontend Skills" skills={portfolioData.skills.frontend} />
-                <SkillCloud title="Backend Skills" skills={portfolioData.skills.backend} />
+                <SkillCloud title="Frontend Skills" skills={frontendSkills} />
+                <SkillCloud title="Backend Skills" skills={backendSkills} />
               </div>
             </article>
             <ContactForm />

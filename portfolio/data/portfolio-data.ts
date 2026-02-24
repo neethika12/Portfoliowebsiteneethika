@@ -1,6 +1,11 @@
 export type SocialLink = {
   label: string;
-  href: string;
+  href?: string;
+};
+
+export type StatItem = {
+  label: string;
+  value: string;
 };
 
 export type ExperienceItem = {
@@ -26,9 +31,11 @@ export type ProjectItem = {
   period: string;
   description: string;
   impact: string;
+  highlights: string[];
+  imagePath: string;
   technologies: string[];
-  liveUrl: string;
-  repoUrl: string;
+  liveUrl?: string;
+  repoUrl?: string;
 };
 
 export type ResearchPaper = {
@@ -36,7 +43,12 @@ export type ResearchPaper = {
   venue: string;
   year: string;
   abstract: string;
-  url: string;
+  url?: string;
+};
+
+export type SkillGroup = {
+  title: string;
+  skills: string[];
 };
 
 export const navItems = [
@@ -53,169 +65,251 @@ export const navItems = [
 
 export const portfolioData = {
   basics: {
-    name: "Neethika",
-    role: "Full-Stack Developer | AI & Research Enthusiast",
-    location: "India",
-    email: "neethika.dev@email.com",
+    name: "Neethika Prathigadapa",
+    role: "Software Engineering Graduate Student | Backend, Full-Stack, Applied ML",
+    location: "Gainesville, FL, USA",
+    phone: "+1 352 664 0252",
+    email: "n.prathigadapa@ufl.edu",
     tagline:
-      "I build performant web products, design scalable APIs, and turn research ideas into production-grade software.",
+      "Software engineering graduate student specializing in backend systems, full-stack development, and applied machine learning with focus on performance, reliability, and scalable design.",
     socialLinks: [
-      { label: "GitHub", href: "https://github.com/" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/" },
-      { label: "LeetCode", href: "https://leetcode.com/" },
+      { label: "GitHub", href: "https://github.com/neethika12" },
+      { label: "LinkedIn" },
     ] as SocialLink[],
   },
   introduction: {
-    title: "Developer Portfolio",
+    title: "Technical Portfolio",
     subtitle:
-      "Interactive technical resume with modern frontend craftsmanship and reliable backend engineering.",
+      "Interactive resume showcasing measurable engineering outcomes across software development, systems, and machine learning.",
     metrics: [
-      { label: "Years coding", value: "4+" },
-      { label: "Projects delivered", value: "15+" },
-      { label: "Research works", value: "3" },
-      { label: "Tech stack depth", value: "20+" },
+      { label: "Internships", value: "3" },
+      { label: "Flagship projects", value: "4" },
+      { label: "Degrees", value: "2" },
+      { label: "Top model accuracy", value: "99%" },
     ],
   },
   about: {
     summary: [
-      "I am a developer who enjoys solving practical problems with clean architecture, thoughtful UI, and measurable business outcomes.",
-      "My work spans responsive frontend interfaces, secure backend APIs, and cloud-ready deployments with observability in mind.",
-      "I focus on writing maintainable code, collaborating effectively with teams, and continuously learning modern engineering patterns.",
+      "I specialize in backend systems, full-stack development, and applied machine learning, with practical experience building RESTful services, distributed pipelines, and containerized applications.",
+      "My engineering approach prioritizes deterministic behavior, clean system design, and measurable outcomes such as lower error rates, faster response times, and better model quality.",
+      "I am currently pursuing an M.S. in Computer Science at the University of Florida and continue to build projects that combine data structures, systems thinking, and production-ready execution.",
     ],
     highlights: [
-      "Frontend specialization in React ecosystems and performance optimization.",
-      "Backend capability with API design, validation, and secure integrations.",
-      "Strong foundation in data structures, system design basics, and research-led experimentation.",
+      "Improved baseline ML classification accuracy by 12% and reduced false positives by 18%.",
+      "Built full-stack services supporting 100+ active users with improved API reliability.",
+      "Automated monitoring across 10+ services and reduced manual checks by 35%.",
     ],
+    stats: [
+      { label: "Certifications", value: "3" },
+      { label: "Primary languages", value: "6" },
+      { label: "Databases used", value: "4" },
+    ] as StatItem[],
     visualPath: "/about-visual.svg",
   },
   skills: {
-    frontend: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Accessibility",
-    ],
-    backend: ["Node.js", "REST APIs", "Express", "PostgreSQL", "MongoDB", "Zod"],
-    cloudAndDevOps: ["Vercel", "Docker", "GitHub Actions", "CI/CD", "Nginx", "Linux"],
-    languages: ["TypeScript", "JavaScript", "Python", "SQL", "C++"],
-    tools: ["Git", "Postman", "Figma", "VS Code", "Jupyter", "Notion"],
+    stats: [
+      { label: "Skill groups", value: "7" },
+      { label: "Core technologies", value: "30+" },
+      { label: "Cloud stack", value: "AWS + Docker + K8s" },
+    ] as StatItem[],
+    groups: [
+      {
+        title: "Languages",
+        skills: ["Python 3.x", "Java 11", "JavaScript (ES6+)", "SQL", "Go", "Bash"],
+      },
+      {
+        title: "Backend",
+        skills: ["Go Microservices", "Node.js", "REST APIs", "JWT Auth", "Async Processing"],
+      },
+      {
+        title: "Frontend",
+        skills: ["React 18", "Angular 15+", "HTML5", "CSS3"],
+      },
+      {
+        title: "ML / AI",
+        skills: ["CNNs", "scikit-learn", "Pandas", "NumPy", "Grad-CAM", "SHAP"],
+      },
+      {
+        title: "Cloud / DevOps",
+        skills: ["AWS (EC2, S3 basics)", "Docker", "Kubernetes", "GitHub Actions", "Linux"],
+      },
+      {
+        title: "Databases",
+        skills: ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
+      },
+      {
+        title: "Engineering",
+        skills: ["Data Structures", "Algorithms", "Unit Testing", "Debugging", "Agile/Scrum"],
+      },
+    ] as SkillGroup[],
   },
+  experienceStats: [
+    { label: "Internships", value: "3" },
+    { label: "Largest user base", value: "100+ users" },
+    { label: "Automation impact", value: "35% fewer manual checks" },
+  ] as StatItem[],
   experience: [
     {
-      role: "Software Developer Intern",
-      company: "TechNova Labs",
+      role: "Machine Learning Intern",
+      company: "SkillDzire",
       location: "Remote",
-      duration: "Jan 2025 - Present",
+      duration: "Mar 2025 - Apr 2025",
       summary:
-        "Developed internal dashboards and API integrations for data-heavy workflows used by product and operations teams.",
+        "Developed supervised machine learning pipelines in Python for end-to-end classification workflows.",
       achievements: [
-        "Built modular React components that improved feature delivery speed by 30%.",
-        "Implemented server-side validation and error boundaries to reduce production incidents.",
-        "Collaborated with design and QA to ship accessible, mobile-first interfaces.",
+        "Improved baseline classification accuracy by 12% using scikit-learn model tuning and preprocessing improvements.",
+        "Designed evaluation workflows with precision, recall, and confusion matrices, reducing false positives by 18%.",
+        "Built repeatable pipeline scripts for cleaner training, validation, and metric tracking.",
       ],
-      technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
+      technologies: ["Python", "scikit-learn", "Pandas", "NumPy"],
     },
     {
-      role: "Freelance Full-Stack Developer",
-      company: "Independent",
-      location: "Hybrid",
-      duration: "2023 - 2025",
+      role: "Software Engineering Intern (Full Stack)",
+      company: "TechnoHacks Edutech",
+      location: "Remote",
+      duration: "Nov 2024 - Jan 2025",
       summary:
-        "Delivered portfolio websites, custom dashboards, and automation tools for students, startups, and small businesses.",
+        "Engineered backend and frontend modules for authentication and business workflows in a production-style environment.",
       achievements: [
-        "Shipped 10+ client projects with responsive design and SEO best practices.",
-        "Introduced reusable code templates that cut project onboarding time by half.",
-        "Integrated analytics and monitoring to help clients track growth metrics.",
+        "Built Node.js REST services supporting 100+ active users.",
+        "Created React components with strict validation, reducing API failure rates by 20%.",
+        "Optimized database queries, improved API contracts, and stabilized builds through logging and exception handling.",
+        "Worked in Agile sprints with code reviews and deployment cycles.",
       ],
-      technologies: ["React", "Next.js", "Firebase", "Tailwind CSS", "Vercel"],
+      technologies: ["Node.js", "React", "REST APIs", "JavaScript", "SQL"],
+    },
+    {
+      role: "System Administrator & Automation Intern",
+      company: "ServiceNow",
+      location: "Remote",
+      duration: "Apr 2024 - Sep 2024",
+      summary:
+        "Automated infrastructure monitoring tasks and supported operational reliability initiatives across services.",
+      achievements: [
+        "Developed Python and Bash automation scripts for 10+ services, reducing manual checks by 35%.",
+        "Analyzed logs and alert patterns to identify recurring root causes.",
+        "Built operational dashboards for proactive issue detection and faster incident response.",
+      ],
+      technologies: ["Python", "Bash", "Linux", "Monitoring Dashboards"],
     },
   ] as ExperienceItem[],
+  educationStats: [
+    { label: "Programs", value: "2" },
+    { label: "MS GPA", value: "3.89 / 4.0" },
+    { label: "B.Tech GPA", value: "9.21 / 10" },
+  ] as StatItem[],
   education: [
     {
-      degree: "B.Tech in Computer Science and Engineering",
-      institution: "Your University Name",
-      duration: "2021 - 2025",
-      focus: "Software Engineering, Machine Learning, and Distributed Systems",
+      degree: "M.S. in Computer Science",
+      institution: "University of Florida, Gainesville, FL",
+      duration: "Aug 2025 - May 2027 (Expected)",
+      focus:
+        "Coursework: Advanced Data Structures, Mathematical Foundations for Intelligent Systems, Analysis of Algorithms, Distributed Multimedia Systems, Internet Storage Systems, Software Engineering, Operating Systems, Machine Learning, Databases",
       highlights: [
-        "CGPA: 8.9/10",
-        "Led technical events and mentored junior developers.",
-        "Built capstone project on AI-assisted developer productivity.",
+        "GPA: 3.89 / 4.0",
+        "Graduate specialization in systems, algorithms, and machine learning.",
       ],
     },
     {
-      degree: "Higher Secondary Education (Science)",
-      institution: "Your School Name",
-      duration: "2019 - 2021",
-      focus: "Physics, Chemistry, Mathematics, Computer Science",
+      degree: "B.Tech in Information Technology",
+      institution: "Mahatma Gandhi Institute of Technology, Hyderabad, India",
+      duration: "Nov 2021 - Jun 2025",
+      focus: "Core software engineering, programming, and data systems curriculum.",
       highlights: [
-        "Graduated with distinction.",
-        "Participated in state-level coding competitions.",
+        "GPA: 9.21 / 10",
+        "Gold Medal",
       ],
     },
   ] as EducationItem[],
+  projectStats: [
+    { label: "Projects showcased", value: "4" },
+    { label: "Largest dataset", value: "7,023 MRI images" },
+    { label: "Best measurable result", value: "99% validation accuracy" },
+  ] as StatItem[],
   projects: [
     {
-      title: "AI Interview Prep Platform",
+      title: "NeuroXAI: Explainable Brain Tumor Detection using EfficientNet",
       period: "2025",
       description:
-        "A full-stack platform that generates role-specific interview questions and gives feedback on answers.",
+        "Developed an MRI-based brain tumor classification system using EfficientNet, with preprocessing pipelines for normalization, augmentation, and Canny edge-based structural enhancement.",
       impact:
-        "Helped peers improve interview readiness through adaptive question sets and performance insights.",
-      technologies: ["Next.js", "TypeScript", "OpenAI API", "PostgreSQL", "Prisma"],
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/",
+        "Achieved 99% validation accuracy on 7,023 MRI images, and improved interpretability with Grad-CAM + SHAP while reducing false positives by 22%.",
+      highlights: ["7,023 MRI images", "99% validation accuracy", "22% false-positive reduction"],
+      imagePath: "/projects/neuroxai.svg",
+      technologies: [
+        "Python",
+        "EfficientNet",
+        "CNN",
+        "Grad-CAM",
+        "Saliency Maps",
+        "Canny Edge Detection",
+      ],
     },
     {
-      title: "Campus Event Management System",
+      title: "Sentinet AI: Multi-Channel Product Intelligence Platform",
       period: "2024",
       description:
-        "Portal for event publishing, registration, and participation tracking with role-based dashboards.",
-      impact: "Reduced manual coordination overhead for student clubs and organizers.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/",
+        "Architected a multi-tenant ingestion pipeline across Jira, Slack, CSV, and support channels to centralize product intelligence inputs.",
+      impact:
+        "Built Go microservices for clustering, pain scoring, and evidence retrieval with ranking based on frequency, recency, sentiment, and account tiers.",
+      highlights: ["Multi-tenant ingestion", "Go microservices", "Ranking logic with 4 weighted factors"],
+      imagePath: "/projects/sentinet.svg",
+      technologies: ["Angular", "Go", "REST APIs", "Docker", "PostgreSQL"],
     },
     {
-      title: "Developer Productivity Analytics",
+      title: "MercatoCloud: Multi-Vendor E-Commerce SaaS",
       period: "2024",
       description:
-        "Visualized repository and issue metrics to identify team bottlenecks and sprint risks.",
+        "Designed a SaaS e-commerce backend with JWT-based RBAC for multiple vendors and product lifecycle management APIs.",
       impact:
-        "Improved planning quality by surfacing trends in delivery velocity and code review latency.",
-      technologies: ["Next.js", "D3.js", "GitHub API", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/",
+        "Supported 8-10 vendors, managed 200+ products, and optimized checkout latency by 30% through API and data-path improvements.",
+      highlights: ["8-10 vendors", "200+ products", "30% checkout latency reduction"],
+      imagePath: "/projects/mercatocloud.svg",
+      technologies: ["React", "Node.js", "MongoDB", "Docker", "Stripe APIs", "JWT"],
+    },
+    {
+      title: "Gator Air Traffic Slot Scheduler",
+      period: "Fall 2025",
+      description:
+        "Implemented a non-preemptive runway scheduling engine from scratch in Python with strict two-phase update semantics and deterministic fairness.",
+      impact:
+        "Passed all 3 official test cases with exact output compliance while maintaining efficient scheduling via custom heaps and hash-based indexing.",
+      highlights: ["3/3 official tests passed", "O(n log k) rescheduling", "Custom heaps built from scratch"],
+      imagePath: "/projects/gator-scheduler.svg",
+      technologies: [
+        "Python",
+        "Max Pairing Heap",
+        "Binary Min-Heap",
+        "Hash Tables",
+        "Scheduling Algorithms",
+      ],
     },
   ] as ProjectItem[],
+  researchStats: [
+    { label: "Technical reports", value: "1" },
+    { label: "Official test suites passed", value: "3" },
+    { label: "Rescheduling complexity", value: "O(n log k)" },
+  ] as StatItem[],
   researchPapers: [
     {
-      title: "Context-Aware Prompting for Developer Assistants",
-      venue: "International Journal of Intelligent Systems",
+      title: "Gator Air Traffic Slot Scheduler (Technical Report)",
+      venue: "COP 5536 - Advanced Data Structures, University of Florida",
       year: "2025",
       abstract:
-        "Studied prompt-structuring strategies that improve answer relevance and reduce hallucinations in coding assistants.",
-      url: "https://doi.org/",
-    },
-    {
-      title: "Early Detection of Build Failures using CI Signal Patterns",
-      venue: "IEEE Student Research Symposium",
-      year: "2024",
-      abstract:
-        "Explored lightweight machine learning features from CI logs to predict failing pipelines earlier in the workflow.",
-      url: "https://doi.org/",
-    },
-    {
-      title: "Human-Centered Metrics for Interactive Learning Platforms",
-      venue: "ACM SIGCHI Student Workshop",
-      year: "2024",
-      abstract:
-        "Evaluated usability and engagement factors in online technical learning tools used by undergraduate developers.",
-      url: "https://doi.org/",
+        "Designed a deterministic runway allocation scheduler using custom max-pairing and min-heap structures, with two-phase updates and strict grading-format compliance.",
+      url: "/gator-air-traffic-report.pdf",
     },
   ] as ResearchPaper[],
+  certifications: [
+    "Cisco Programming Essentials in Python",
+    "Oracle Java Foundations",
+    "ServiceNow Certified System Administrator",
+  ],
+  resumeStats: [
+    { label: "M.S. GPA", value: "3.89 / 4.0" },
+    { label: "B.Tech GPA", value: "9.21 / 10" },
+    { label: "Certifications", value: "3" },
+  ] as StatItem[],
   resume: {
     pdf: "/resume-neethika.pdf",
     text: "/resume-neethika.txt",

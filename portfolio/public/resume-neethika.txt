@@ -1,37 +1,69 @@
-NEETHIKA
-Full-Stack Developer | AI & Research Enthusiast
-Location: India
-Email: neethika.dev@email.com
+NEETHIKA PRATHIGADAPA
++1 352 664 0252
+n.prathigadapa@ufl.edu
 
-PROFESSIONAL SUMMARY
-Developer focused on building robust user experiences, scalable backend services,
-and measurable outcomes through reliable software engineering practices.
+SUMMARY
+Software engineering graduate student specializing in backend systems, full-stack development, and applied machine learning.
+Experienced in building RESTful services, distributed pipelines, and containerized applications with emphasis on performance,
+reliability, and scalable design.
 
-SKILLS
-- Frontend: React, Next.js, TypeScript, Tailwind CSS, Framer Motion
-- Backend: Node.js, REST APIs, Express, PostgreSQL, MongoDB
-- Cloud & DevOps: Vercel, Docker, GitHub Actions, CI/CD
-- Languages: TypeScript, JavaScript, Python, SQL, C++
+CORE SKILLS
+Languages: Python 3.x, Java 11, JavaScript (ES6+), SQL, Go, Bash
+Backend: Go Microservices, Node.js, REST APIs, JWT Auth, Async Processing
+Frontend: React 18, Angular 15+, HTML5, CSS3
+ML/AI: CNNs, scikit-learn, Pandas, NumPy, Grad-CAM, SHAP
+Cloud/DevOps: AWS (EC2, S3 basics), Docker, Kubernetes, GitHub Actions, Linux
+Databases: PostgreSQL, MySQL, SQLite, MongoDB
+Engineering: Data Structures, Algorithms, Unit Testing, Debugging, Agile/Scrum
 
 EXPERIENCE
-Software Developer Intern | TechNova Labs | Jan 2025 - Present
-- Built modular dashboard features for data-heavy operational workflows.
-- Improved feature delivery speed and production reliability.
+Machine Learning Intern | SkillDzire | Mar 2025 - Apr 2025
+- Developed end-to-end supervised ML pipelines in Python using scikit-learn, improving baseline classification accuracy by 12%.
+- Designed preprocessing workflows and evaluated models using precision, recall, and confusion matrices, reducing false positives by 18%.
 
-Freelance Full-Stack Developer | Independent | 2023 - 2025
-- Delivered 10+ responsive web products for startups and individual clients.
+Software Engineering Intern (Full Stack) | TechnoHacks Edutech | Nov 2024 - Jan 2025
+- Engineered RESTful backend services for authentication and business logic using Node.js, supporting 100+ active users.
+- Built React frontend components with structured validation, reducing API failure rates by 20%.
+- Optimized database queries and API contracts to improve response consistency and frontend rendering performance.
+- Implemented logging and exception handling frameworks to debug cross-service issues and stabilize production builds.
+- Collaborated in Agile sprints, participating in code reviews and deployment cycles.
+
+System Administrator & Automation Intern | ServiceNow (Remote) | Apr 2024 - Sep 2024
+- Developed Python and Bash automation scripts streamlining monitoring across 10+ services, reducing manual checks by 35%.
+- Analyzed logs and alert patterns to identify root causes of recurring incidents.
+- Built operational dashboards enabling proactive infrastructure issue detection.
 
 EDUCATION
-B.Tech in Computer Science and Engineering | Your University Name | 2021 - 2025
+University of Florida, Gainesville, FL | Aug 2025 - May 2027
+M.S. in Computer Science | GPA: 3.89 / 4.0 | Expected May 2027
+Coursework: Advanced Data Structures, Mathematical Foundations for Intelligent Systems, Analysis of Algorithms, Distributed Multimedia Systems,
+Internet Storage Systems, Software Engineering, Operating Systems, Machine Learning, Databases
+
+Mahatma Gandhi Institute of Technology, Hyderabad, India | Nov 2021 - Jun 2025
+B.Tech in Information Technology | GPA: 9.21 / 10 | Gold Medal
 
 SELECTED PROJECTS
-- AI Interview Prep Platform
-- Campus Event Management System
-- Developer Productivity Analytics
+NeuroXAI: Explainable Brain Tumor Detection using EfficientNet
+- Developed an MRI-based brain tumor classification system using EfficientNet trained on 7,023 MRI images, achieving 99% validation accuracy.
+- Implemented preprocessing pipelines with normalization, augmentation, and Canny edge detection.
+- Applied Grad-CAM saliency maps and SHAP explainability, reducing false positives by 22%.
 
-RESEARCH PAPERS
-- Context-Aware Prompting for Developer Assistants
-- Early Detection of Build Failures using CI Signal Patterns
-- Human-Centered Metrics for Interactive Learning Platforms
+Sentinet AI: Multi-Channel Product Intelligence Platform
+- Architected multi-tenant ingestion pipelines from Jira, Slack, CSV, and support tools.
+- Built Go microservices for clustering, pain scoring, and evidence retrieval.
+- Implemented ranking logic combining frequency, recency, sentiment, and account tiers.
 
-Note: Replace this file and resume-neethika.pdf with your final resume content.
+MercatoCloud: Multi-Vendor E-Commerce SaaS
+- Designed SaaS backend supporting 8-10 vendors with JWT-based RBAC.
+- Built APIs managing 200+ products and optimized checkout latency by 30%.
+- Containerized services and deployed via CI pipelines.
+
+Gator Air Traffic Slot Scheduler
+- Implemented a deterministic non-preemptive runway scheduler with custom heaps and two-phase updates.
+- Passed all 3 official test cases with exact formatting compliance.
+- Rescheduling complexity: O(n log k).
+
+CERTIFICATIONS
+- Cisco Programming Essentials in Python
+- Oracle Java Foundations
+- ServiceNow Certified System Administrator
