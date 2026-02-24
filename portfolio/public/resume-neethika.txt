@@ -1,0 +1,37 @@
+NEETHIKA
+Full-Stack Developer | AI & Research Enthusiast
+Location: India
+Email: neethika.dev@email.com
+
+PROFESSIONAL SUMMARY
+Developer focused on building robust user experiences, scalable backend services,
+and measurable outcomes through reliable software engineering practices.
+
+SKILLS
+- Frontend: React, Next.js, TypeScript, Tailwind CSS, Framer Motion
+- Backend: Node.js, REST APIs, Express, PostgreSQL, MongoDB
+- Cloud & DevOps: Vercel, Docker, GitHub Actions, CI/CD
+- Languages: TypeScript, JavaScript, Python, SQL, C++
+
+EXPERIENCE
+Software Developer Intern | TechNova Labs | Jan 2025 - Present
+- Built modular dashboard features for data-heavy operational workflows.
+- Improved feature delivery speed and production reliability.
+
+Freelance Full-Stack Developer | Independent | 2023 - 2025
+- Delivered 10+ responsive web products for startups and individual clients.
+
+EDUCATION
+B.Tech in Computer Science and Engineering | Your University Name | 2021 - 2025
+
+SELECTED PROJECTS
+- AI Interview Prep Platform
+- Campus Event Management System
+- Developer Productivity Analytics
+
+RESEARCH PAPERS
+- Context-Aware Prompting for Developer Assistants
+- Early Detection of Build Failures using CI Signal Patterns
+- Human-Centered Metrics for Interactive Learning Platforms
+
+Note: Replace this file and resume-neethika.pdf with your final resume content.
