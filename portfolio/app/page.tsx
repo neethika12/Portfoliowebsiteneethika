@@ -295,7 +295,11 @@ export default function Home() {
                   {paper.venue} - {paper.year}
                 </p>
                 <h3 className="mt-2 text-base font-semibold text-white">{paper.title}</h3>
+                {paper.authors?.length ? (
+                  <p className="mt-3 text-sm text-slate-300">Authors: {paper.authors.join(", ")}</p>
+                ) : null}
                 <p className="mt-3 text-sm text-slate-300">{paper.abstract}</p>
+                {paper.citation ? <p className="mt-3 text-sm text-slate-400">{paper.citation}</p> : null}
                 {paper.url ? (
                   <a
                     href={paper.url}

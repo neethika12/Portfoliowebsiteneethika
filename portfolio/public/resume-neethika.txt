@@ -1,6 +1,7 @@
 NEETHIKA PRATHIGADAPA
 +1 352 664 0252
 n.prathigadapa@ufl.edu
+linkedin.com/in/neethika-prathigadapa-94b273281
 
 SUMMARY
 Software engineering graduate student specializing in backend systems, full-stack development, and applied machine learning.
@@ -67,3 +68,7 @@ CERTIFICATIONS
 - Cisco Programming Essentials in Python
 - Oracle Java Foundations
 - ServiceNow Certified System Administrator
+
+RESEARCH PAPERS
+- S. K. Kukunuri, N. Prathigadapa, and G. N. Sujini, "Brain tumor detection using advanced explainable AI algorithms," Journal of Data Engineering and Knowledge Discovery, vol. 2, no. 2, pp. 22-35, Jul. 2025.
+- Cardiac Disease Detection with Deep Learning (co-authors: Dr. N. Sree Divya, G. Ashrit Reddy, P. Neethika)

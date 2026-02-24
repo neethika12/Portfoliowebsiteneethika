@@ -40,6 +40,19 @@ npm run dev
 
 Open: `http://localhost:3000`
 
+## Run From Repository Root
+
+If you are in the repo root (`/workspace`), run:
+
+```bash
+cd portfolio
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+Then open: `http://localhost:3000`
+
 ## Configure Contact Form Email
 
 The contact form endpoint is: `POST /api/contact`
@@ -73,9 +86,25 @@ Replace assets:
 
 1. Push this repository to GitHub.
 2. Import the repo into Vercel.
-3. Add environment variables from `.env.example`.
-4. Deploy.
-5. Use the deployed URL in LinkedIn and job applications.
+3. Set **Root Directory** to `portfolio` in Vercel project settings.
+4. Add environment variables from `.env.example`.
+5. Deploy.
+6. Use the deployed URL in LinkedIn and job applications.
+
+### One-time Vercel Checklist
+
+- Framework preset: **Next.js**
+- Build command: `npm run build` (default)
+- Output setting: managed by Next.js
+- Environment variables:
+  - `SMTP_HOST`
+  - `SMTP_PORT`
+  - `SMTP_USER`
+  - `SMTP_PASS`
+  - `CONTACT_FROM_EMAIL`
+  - `CONTACT_TO_EMAIL`
+
+If email env vars are not configured, the contact endpoint still accepts messages but logs them server-side for development.
 
 ## Quality Checks
 

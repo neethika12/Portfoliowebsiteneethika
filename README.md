@@ -4,4 +4,15 @@ Main application source is in:
 
 - `portfolio/`
 
-Go to that directory and follow setup steps in `portfolio/README.md`.
+Quick start:
+
+```bash
+cd portfolio
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+For deployment, see `portfolio/README.md`.

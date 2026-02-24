@@ -42,6 +42,8 @@ export type ResearchPaper = {
   title: string;
   venue: string;
   year: string;
+  authors?: string[];
+  citation?: string;
   abstract: string;
   url?: string;
 };
@@ -74,7 +76,7 @@ export const portfolioData = {
       "Software engineering graduate student specializing in backend systems, full-stack development, and applied machine learning with focus on performance, reliability, and scalable design.",
     socialLinks: [
       { label: "GitHub", href: "https://github.com/neethika12" },
-      { label: "LinkedIn" },
+      { label: "LinkedIn", href: "https://linkedin.com/in/neethika-prathigadapa-94b273281" },
     ] as SocialLink[],
   },
   introduction: {
@@ -286,15 +288,34 @@ export const portfolioData = {
     },
   ] as ProjectItem[],
   researchStats: [
+    { label: "Research papers", value: "2" },
     { label: "Technical reports", value: "1" },
-    { label: "Official test suites passed", value: "3" },
-    { label: "Rescheduling complexity", value: "O(n log k)" },
+    { label: "Total research works", value: "3" },
   ] as StatItem[],
   researchPapers: [
+    {
+      title: "Brain Tumor Detection Using Advanced Explainable AI Algorithms",
+      venue: "Journal of Data Engineering and Knowledge Discovery",
+      year: "Jul 2025",
+      authors: ["S. K. Kukunuri", "N. Prathigadapa", "G. N. Sujini"],
+      citation:
+        "S. K. Kukunuri, N. Prathigadapa, and G. N. Sujini, Journal of Data Engineering and Knowledge Discovery, vol. 2, no. 2, pp. 22-35, Jul. 2025.",
+      abstract:
+        "Co-authored paper on brain tumor detection using explainable AI algorithms, emphasizing transparent model behavior for clinically relevant decision support.",
+    },
+    {
+      title: "Cardiac Disease Detection with Deep Learning",
+      venue: "Mahatma Gandhi Institute of Technology, India",
+      year: "Not specified",
+      authors: ["Dr. N. Sree Divya", "G. Ashrit Reddy", "P. Neethika"],
+      abstract:
+        "Co-authored deep learning study focused on cardiac disease detection with an emphasis on practical predictive modeling.",
+    },
     {
       title: "Gator Air Traffic Slot Scheduler (Technical Report)",
       venue: "COP 5536 - Advanced Data Structures, University of Florida",
       year: "2025",
+      authors: ["Neethika Prathigadapa"],
       abstract:
         "Designed a deterministic runway allocation scheduler using custom max-pairing and min-heap structures, with two-phase updates and strict grading-format compliance.",
       url: "/gator-air-traffic-report.pdf",
