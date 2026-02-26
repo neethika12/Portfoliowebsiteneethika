@@ -26,14 +26,25 @@ export default function Home() {
         <AnimatedSection id="introduction" className="pt-6">
           <div className="grid gap-8 md:grid-cols-[1.15fr_0.85fr] md:items-center">
             <div>
-              <p className="mb-3 inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-cyan-200">
-                {portfolioData.basics.role}
-              </p>
-              <h1 className="text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
-                {portfolioData.introduction.title}
+              <p className="mb-3 text-xs font-medium uppercase tracking-[0.22em] text-cyan-300">Hello, I am</p>
+              <h1 className="text-balance bg-gradient-to-r from-white via-cyan-100 to-fuchsia-200 bg-clip-text text-4xl font-semibold leading-tight text-transparent md:text-6xl">
+                {portfolioData.basics.name}
               </h1>
-              <p className="mt-4 max-w-2xl text-slate-300 md:text-lg">{portfolioData.basics.tagline}</p>
-              <p className="mt-4 text-sm text-slate-400">{portfolioData.introduction.subtitle}</p>
+              <p className="mt-4 max-w-2xl text-slate-300 md:text-lg">
+                Building scalable backend systems, full-stack web platforms, and explainable AI solutions with
+                measurable outcomes.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs font-medium tracking-wide text-cyan-100">
+                  M.S. Computer Science @ UF
+                </span>
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-slate-200">
+                  Backend & Distributed Systems
+                </span>
+                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-slate-200">
+                  Applied ML & XAI
+                </span>
+              </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <div className="inline-flex items-center gap-2 text-sm text-slate-300">
