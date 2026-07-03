@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" fill="none">
+  <rect width="720" height="480" rx="16" fill="#EEF2F8"/>
+  <circle cx="360" cy="200" r="120" fill="url(#g1)" opacity="0.35"/>
+  <circle cx="280" cy="280" r="80" fill="url(#g2)" opacity="0.25"/>
+  <defs>
+    <linearGradient id="g1" x1="240" y1="80" x2="480" y2="320">
+      <stop stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="200" y1="200" x2="400" y2="360">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#0D9488" stroke-width="1.5" opacity="0.5">
+    <line x1="200" y1="180" x2="320" y2="140"/>
+    <line x1="320" y1="140" x2="440" y2="200"/>
+    <line x1="440" y1="200" x2="520" y2="280"/>
+    <line x1="200" y1="180" x2="260" y2="300"/>
+    <line x1="260" y1="300" x2="400" y2="340"/>
+    <line x1="400" y1="340" x2="520" y2="280"/>
+    <line x1="320" y1="140" x2="360" y2="220"/>
+    <line x1="440" y1="200" x2="360" y2="220"/>
+  </g>
+  <circle cx="200" cy="180" r="10" fill="#14B8A6"/>
+  <circle cx="320" cy="140" r="12" fill="#0D9488"/>
+  <circle cx="440" cy="200" r="11" fill="#818CF8"/>
+  <circle cx="520" cy="280" r="9" fill="#4F46E5"/>
+  <circle cx="260" cy="300" r="8" fill="#14B8A6"/>
+  <circle cx="400" cy="340" r="10" fill="#6366F1"/>
+  <circle cx="360" cy="220" r="14" fill="#D97706"/>
+  <text x="48" y="420" font-family="system-ui,sans-serif" font-size="14" fill="#64748B">fMRI · RSA · Anomaly Detection · AWS</text>
+</svg>

@@ -1,0 +1,292 @@
+@import "tailwindcss";
+
+/* Neural Observatory — neuroscience × safety-critical ML × production engineering */
+:root {
+  --void:         #06090F;
+  --obsidian:     #0C1220;
+  --slate:        #151D2E;
+  --mist:         #EEF2F8;
+  --mist-2:       #E2E8F2;
+  --paper:        #FFFFFF;
+  --ink:          #0A0F18;
+  --ink-2:        #334155;
+  --ink-3:        #64748B;
+  --synapse:      #0D9488;
+  --synapse-glow: #14B8A6;
+  --cortex:       #4F46E5;
+  --cortex-light: #818CF8;
+  --signal:       #D97706;
+  --accent:       var(--synapse);
+  --accent-hover: #0F766E;
+  --accent-bg:    rgba(13, 148, 136, 0.1);
+  --cortex-bg:    rgba(79, 70, 229, 0.08);
+  --border:       #CBD5E1;
+  --border-accent:#5EEAD4;
+  --gradient-hero: linear-gradient(135deg, #06090F 0%, #0F172A 45%, #134E4A 100%);
+
+  --background: var(--mist);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono-plex);
+  --font-serif: var(--font-display);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Subtle neural grid texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(13, 148, 136, 0.06), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(79, 70, 229, 0.05), transparent 45%),
+    linear-gradient(rgba(100, 116, 139, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 116, 139, 0.04) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  pointer-events: none;
+}
+
+.serif {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.mono-label {
+  font-family: var(--font-mono-plex), ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.glass-card,
+.paper-card {
+  border: 1px solid var(--border);
+  background: var(--paper);
+  box-shadow:
+    0 1px 2px rgba(10, 15, 24, 0.04),
+    0 8px 24px rgba(10, 15, 24, 0.05);
+  transition: box-shadow 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.paper-card:hover {
+  border-color: rgba(13, 148, 136, 0.35);
+  box-shadow:
+    0 4px 12px rgba(13, 148, 136, 0.08),
+    0 16px 40px rgba(10, 15, 24, 0.08);
+}
+
+.pillar-card {
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  background: linear-gradient(160deg, rgba(12, 18, 32, 0.97) 0%, rgba(19, 78, 74, 0.35) 100%);
+  color: #E2E8F0;
+  box-shadow: 0 20px 50px rgba(6, 9, 15, 0.35);
+}
+
+.pillar-card--cortex {
+  border-color: rgba(129, 140, 248, 0.25);
+  background: linear-gradient(160deg, rgba(12, 18, 32, 0.97) 0%, rgba(49, 46, 129, 0.4) 100%);
+}
+
+.hero-shell {
+  min-height: 360px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(94, 234, 212, 0.15);
+  background: var(--gradient-hero);
+  box-shadow: 0 24px 60px rgba(6, 9, 15, 0.4);
+}
+
+.hero-canvas-wrapper,
+.hero-canvas-placeholder {
+  min-height: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-canvas-placeholder {
+  background:
+    radial-gradient(circle at 30% 25%, rgba(20, 184, 166, 0.2), transparent 45%),
+    radial-gradient(circle at 70% 75%, rgba(99, 102, 241, 0.18), transparent 50%),
+    var(--obsidian);
+}
+
+.input-field {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.72rem 0.86rem;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+  font-size: 0.875rem;
+}
+.input-field::placeholder { color: var(--ink-3); }
+.input-field:focus-visible {
+  outline: none;
+  border-color: var(--synapse);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.62rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+  cursor: pointer;
+}
+.primary-button {
+  border: 1px solid var(--synapse);
+  background: linear-gradient(135deg, var(--synapse) 0%, #115E59 100%);
+  color: #F0FDFA;
+}
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.35);
+}
+.secondary-button {
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink-2);
+}
+.secondary-button:hover {
+  border-color: var(--synapse);
+  color: var(--synapse);
+  transform: translateY(-1px);
+}
+
+.accent-tag {
+  border: 1px solid rgba(13, 148, 136, 0.35);
+  background: var(--accent-bg);
+  color: var(--synapse);
+  border-radius: 9999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cortex-tag {
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  background: var(--cortex-bg);
+  color: var(--cortex);
+  border-radius: 9999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.signal-tag {
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  background: rgba(217, 119, 6, 0.08);
+  color: var(--signal);
+  border-radius: 9999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.neutral-tag {
+  border: 1px solid var(--border);
+  background: var(--mist);
+  color: var(--ink-2);
+  border-radius: 9999px;
+  padding: 0.18rem 0.75rem;
+  font-size: 0.7rem;
+}
+
+.availability-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  background: rgba(217, 119, 6, 0.1);
+  color: #B45309;
+  border-radius: 9999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.availability-pill::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 8px var(--signal);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+.section-divider {
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--synapse), var(--cortex));
+  margin-top: 0.5rem;
+  border-radius: 3px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--synapse);
+}
+
+.social-link {
+  border: 1px solid var(--border);
+  color: var(--ink-2);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
+}
+.social-link:hover {
+  border-color: var(--synapse);
+  color: var(--synapse);
+  background: var(--accent-bg);
+}
+
+.stat-glow {
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, var(--synapse-glow), var(--cortex-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

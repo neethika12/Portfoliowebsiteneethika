@@ -1,0 +1,41 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="36" fill="url(#bg)"/>
+  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#0F172A" fill-opacity="0.78" stroke="#334155" stroke-width="2"/>
+
+  <text x="136" y="166" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">
+    Gator Air Traffic Slot Scheduler
+  </text>
+  <text x="136" y="206" fill="#A5F3FC" font-family="Arial, Helvetica, sans-serif" font-size="23">
+    COP 5536 - Advanced Data Structures (Fall 2025)
+  </text>
+
+  <rect x="136" y="248" width="420" height="86" rx="14" fill="#0C4A6E" fill-opacity="0.44" stroke="#38BDF8"/>
+  <text x="168" y="303" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+    Two-Phase Update Model
+  </text>
+
+  <rect x="578" y="248" width="244" height="86" rx="14" fill="#14532D" fill-opacity="0.44" stroke="#4ADE80"/>
+  <text x="608" y="303" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+    3/3 Tests
+  </text>
+
+  <rect x="842" y="248" width="200" height="86" rx="14" fill="#4C1D95" fill-opacity="0.44" stroke="#C084FC"/>
+  <text x="864" y="303" fill="#F3E8FF" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+    O(n log k)
+  </text>
+
+  <rect x="136" y="376" width="906" height="154" rx="22" fill="#111827" stroke="#475569"/>
+  <text x="178" y="438" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">
+    Custom Max Pairing Heap + Binary Min-Heap + Hash Indexes
+  </text>
+  <text x="178" y="482" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="23">
+    Deterministic runway assignment with strict output-format compliance
+  </text>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1120"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+</svg>
