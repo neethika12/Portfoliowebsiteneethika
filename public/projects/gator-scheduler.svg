@@ -1,41 +1,61 @@
 <svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="700" rx="36" fill="url(#bg)"/>
-  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#0F172A" fill-opacity="0.78" stroke="#334155" stroke-width="2"/>
+  <circle cx="1080" cy="150" r="180" fill="url(#glow1)" fill-opacity="0.5"/>
+  <circle cx="100" cy="590" r="190" fill="url(#glow2)" fill-opacity="0.55"/>
+  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#171256" fill-opacity="0.72" stroke="#3B3670" stroke-width="2"/>
 
-  <text x="136" y="166" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">
-    Gator Air Traffic Slot Scheduler
+  <text x="136" y="166" fill="#F5F3FF" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">
+    Agentic AI Workflow Prototypes
   </text>
-  <text x="136" y="206" fill="#A5F3FC" font-family="Arial, Helvetica, sans-serif" font-size="23">
-    COP 5536 - Advanced Data Structures (Fall 2025)
-  </text>
-
-  <rect x="136" y="248" width="420" height="86" rx="14" fill="#0C4A6E" fill-opacity="0.44" stroke="#38BDF8"/>
-  <text x="168" y="303" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
-    Two-Phase Update Model
+  <text x="136" y="206" fill="#D8F24C" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600">
+    Multi-Step LLM Automation with LangChain, CrewAI &amp; n8n
   </text>
 
-  <rect x="578" y="248" width="244" height="86" rx="14" fill="#14532D" fill-opacity="0.44" stroke="#4ADE80"/>
-  <text x="608" y="303" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
-    3/3 Tests
+  <rect x="136" y="250" width="270" height="82" rx="16" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="164" y="300" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    5+ Workflows
   </text>
 
-  <rect x="842" y="248" width="200" height="86" rx="14" fill="#4C1D95" fill-opacity="0.44" stroke="#C084FC"/>
-  <text x="864" y="303" fill="#F3E8FF" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
-    O(n log k)
+  <rect x="430" y="250" width="240" height="82" rx="16" fill="#D8F24C" fill-opacity="0.22" stroke="#D8F24C"/>
+  <text x="458" y="300" fill="#F3FBC9" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    CrewAI
   </text>
 
-  <rect x="136" y="376" width="906" height="154" rx="22" fill="#111827" stroke="#475569"/>
-  <text x="178" y="438" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">
-    Custom Max Pairing Heap + Binary Min-Heap + Hash Indexes
+  <rect x="694" y="250" width="270" height="82" rx="16" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="722" y="300" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    RAG Design
   </text>
-  <text x="178" y="482" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="23">
-    Deterministic runway assignment with strict output-format compliance
+
+  <g stroke="#D8F24C" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M180 356 h180 a14 14 0 0 1 14 14 v40"/>
+    <path d="M540 356 h-180 a14 14 0 0 0 -14 14 v40"/>
+    <path d="M540 356 h180 a14 14 0 0 1 14 14 v40"/>
+    <path d="M900 356 h-180 a14 14 0 0 0 -14 14 v40"/>
+  </g>
+  <circle cx="180" cy="356" r="8" fill="#D8F24C"/>
+  <circle cx="540" cy="356" r="8" fill="#D8F24C"/>
+  <circle cx="900" cy="356" r="8" fill="#D8F24C"/>
+
+  <rect x="136" y="420" width="928" height="122" rx="22" fill="#0F0B33" stroke="#3B3670"/>
+  <text x="176" y="466" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">
+    Document Processing · Summarization · Decision Routing
+  </text>
+  <text x="176" y="500" fill="#B7B2E8" font-family="Arial, Helvetica, sans-serif" font-size="20">
+    LangChain · CrewAI · n8n · OpenAI · HuggingFace
   </text>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1120"/>
-      <stop offset="1" stop-color="#020617"/>
+      <stop stop-color="#171256"/>
+      <stop offset="1" stop-color="#0B0824"/>
     </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1080 150) rotate(90) scale(180)">
+      <stop stop-color="#372FE0"/>
+      <stop offset="1" stop-color="#372FE0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 590) rotate(90) scale(190)">
+      <stop stop-color="#D8F24C"/>
+      <stop offset="1" stop-color="#D8F24C" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 </svg>

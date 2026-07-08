@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neethika Prathigadapa — Portfolio
 
 This is my personal portfolio website — an interactive, full-stack site built to showcase my work in ML research, safety-critical AI, and full-stack engineering. It doubles as a living resume: research labs, professional experience, education, selected projects, and publications, all in one place, with a downloadable resume and a working contact form.
@@ -46,6 +47,15 @@ Open: `http://localhost:3000`
 ## Run From Repository Root
 
 If you are in the repo root (`/workspace`), run:
+=======
+# Portfolio Website Monorepo
+
+Main application source is in:
+
+- `portfolio/`
+
+Quick start:
+>>>>>>> e1424400ee89ddab7d5ea95bc5232dbb4d2397c7
 
 ```bash
 cd portfolio
@@ -54,6 +64,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
+<<<<<<< HEAD
 Then open: `http://localhost:3000`
 
 ## Configure Contact Form Email
@@ -134,3 +145,8 @@ portfolio/
 ## About Me
 
 I'm Neethika Prathigadapa — working across ML research, safety-critical AI, and full-stack engineering. This site is where I bring my research, projects, and experience together in one place, so feel free to reach out through the contact form if you'd like to connect.
+=======
+Open `http://localhost:3000` in your browser.
+
+For deployment, see `portfolio/README.md`.
+>>>>>>> e1424400ee89ddab7d5ea95bc5232dbb4d2397c7

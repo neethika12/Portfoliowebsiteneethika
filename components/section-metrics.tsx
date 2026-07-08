@@ -10,11 +10,15 @@ export function SectionMetrics({ items }: SectionMetricsProps) {
       {items.map((item) => (
         <article
           key={`${item.label}-${item.value}`}
-          className="rounded-xl px-4 py-3"
+          className="relative overflow-hidden rounded-xl px-4 py-3"
           style={{ border: "1px solid var(--border)", background: "var(--paper)" }}
         >
-          <p className="serif text-xl font-semibold" style={{ color: "var(--ink)" }}>{item.value}</p>
-          <p className="mt-0.5 text-[10px] uppercase tracking-[0.14em]" style={{ color: "var(--ink-3)" }}>{item.label}</p>
+          <span
+            className="absolute inset-x-0 top-0 h-[2px]"
+            style={{ background: "linear-gradient(90deg, var(--synapse), var(--cortex))" }}
+          />
+          <p className="serif stat-glow text-xl font-semibold">{item.value}</p>
+          <p className="mono-label mt-0.5" style={{ color: "var(--ink-3)" }}>{item.label}</p>
         </article>
       ))}
     </div>

@@ -1,37 +1,53 @@
 <svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="700" rx="36" fill="url(#bg)"/>
-  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#0F172A" fill-opacity="0.78" stroke="#334155" stroke-width="2"/>
+  <circle cx="120" cy="140" r="170" fill="url(#glow1)" fill-opacity="0.5"/>
+  <circle cx="1060" cy="580" r="190" fill="url(#glow2)" fill-opacity="0.55"/>
+  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#171256" fill-opacity="0.72" stroke="#3B3670" stroke-width="2"/>
 
-  <text x="136" y="168" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">
-    Sentinet AI
+  <text x="136" y="168" fill="#F5F3FF" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">
+    Sentinent
   </text>
-  <text x="136" y="208" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="24">
-    Multi-Channel Product Intelligence Platform
-  </text>
-
-  <rect x="136" y="256" width="274" height="84" rx="14" fill="#1D4ED8" fill-opacity="0.32" stroke="#60A5FA"/>
-  <text x="170" y="306" fill="#EFF6FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Jira</text>
-  <rect x="452" y="256" width="274" height="84" rx="14" fill="#0F766E" fill-opacity="0.3" stroke="#22D3EE"/>
-  <text x="486" y="306" fill="#ECFEFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Slack</text>
-  <rect x="768" y="256" width="274" height="84" rx="14" fill="#7C3AED" fill-opacity="0.3" stroke="#C084FC"/>
-  <text x="802" y="306" fill="#F3E8FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">CSV</text>
-
-  <rect x="310" y="390" width="580" height="128" rx="18" fill="#111827" stroke="#475569"/>
-  <text x="356" y="446" fill="#A5F3FC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">
-    Go Microservices + Ranking Engine
-  </text>
-  <text x="356" y="484" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="22">
-    Frequency + Recency + Sentiment + Account Tier
+  <text x="136" y="208" fill="#D8F24C" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">
+    Unified Notification Aggregator
   </text>
 
-  <path d="M273 340L515 392" stroke="#67E8F9" stroke-width="5" stroke-linecap="round"/>
-  <path d="M589 340L589 392" stroke="#67E8F9" stroke-width="5" stroke-linecap="round"/>
-  <path d="M905 340L663 392" stroke="#67E8F9" stroke-width="5" stroke-linecap="round"/>
+  <rect x="136" y="252" width="196" height="72" rx="14" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="162" y="298" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Slack</text>
+  <rect x="352" y="252" width="196" height="72" rx="14" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="378" y="298" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">GitHub</text>
+  <rect x="568" y="252" width="196" height="72" rx="14" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="594" y="298" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Gmail</text>
+  <rect x="784" y="252" width="176" height="72" rx="14" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="810" y="298" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Jira</text>
+
+  <path d="M234 324L560 388" stroke="#D8F24C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M450 324L560 388" stroke="#D8F24C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M666 324L620 388" stroke="#D8F24C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M872 324L680 388" stroke="#D8F24C" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="320" y="392" width="560" height="148" rx="22" fill="#0F0B33" stroke="#3B3670"/>
+  <text x="360" y="444" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+    OAuth 2.0 + Real-Time WebSockets
+  </text>
+  <text x="360" y="478" fill="#B7B2E8" font-family="Arial, Helvetica, sans-serif" font-size="21">
+    Angular frontend · JWT RBAC · webhook ingestion
+  </text>
+  <text x="360" y="510" fill="#D8F24C" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600">
+    80%+ Cypress E2E coverage
+  </text>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1120"/>
-      <stop offset="1" stop-color="#020617"/>
+      <stop stop-color="#171256"/>
+      <stop offset="1" stop-color="#0B0824"/>
     </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 140) rotate(90) scale(170)">
+      <stop stop-color="#372FE0"/>
+      <stop offset="1" stop-color="#372FE0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1060 580) rotate(90) scale(190)">
+      <stop stop-color="#D8F24C"/>
+      <stop offset="1" stop-color="#D8F24C" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 </svg>

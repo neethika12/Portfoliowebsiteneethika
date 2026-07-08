@@ -1,35 +1,35 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const bodyFont = IBM_Plex_Sans({
+const bodyFont = Inter({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const displayFont = Fraunces({
+const displayFont = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const monoFont = IBM_Plex_Mono({
+const monoFont = Space_Grotesk({
   variable: "--font-mono-plex",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Neethika Prathigadapa | ML Research & Engineering",
+  title: "Neethika Prathigadapa | Researcher × Software Engineer",
   description:
-    "MS Computer Science @ UF — brain-aligned video models, safety-critical anomaly detection, and production AI platforms. Open to Fall 2026 SWE/ML Co-op.",
+    "MS Computer Science @ UF — brain-aligned video models, safety-critical anomaly detection, and production AI platforms.",
   keywords: [
     "machine learning",
+    "software engineer",
+    "AI research",
     "neuroscience",
-    "fMRI",
-    "anomaly detection",
-    "full-stack AI",
+    "safety-critical AI",
     "University of Florida",
   ],
 };

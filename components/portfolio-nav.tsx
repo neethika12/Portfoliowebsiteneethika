@@ -10,36 +10,34 @@ type NavItem = {
 };
 
 type PortfolioNavProps = {
-  name: string;
   items: NavItem[];
 };
 
-export function PortfolioNav({ name, items }: PortfolioNavProps) {
+export function PortfolioNav({ items }: PortfolioNavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-4 z-50 mx-auto mb-10 w-[min(1120px,94vw)]">
       <div
-        className="flex items-center justify-between gap-4 rounded-2xl px-5 py-3.5 backdrop-blur-xl"
+        className="flex items-center justify-end gap-4 rounded-2xl px-5 py-3.5 backdrop-blur-xl"
         style={{
-          background: "rgba(238,242,248,0.92)",
+          background: "rgba(21,5,5,0.78)",
           border: "1px solid var(--border)",
-          boxShadow: "0 4px 24px rgba(10,15,24,0.06)",
+          boxShadow: "0 4px 24px rgba(0,0,0,0.4)",
         }}
       >
-        <a href="#introduction" className="serif text-sm font-semibold md:text-base" style={{ color: "var(--ink)" }}>
-          <span className="hidden sm:inline">{name}</span>
-          <span className="sm:hidden">N. Prathigadapa</span>
+        <a href="#introduction" className="mr-auto flex items-center">
+          <span className="status-dot" />
         </a>
 
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {items.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm transition-colors"
-              style={{ color: "var(--ink-3)" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--synapse)")}
+              className="mono-label transition-colors"
+              style={{ color: "var(--ink-3)", letterSpacing: "0.08em" }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--crimson-light)")}
               onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--ink-3)")}
             >
               {item.label}
@@ -65,11 +63,11 @@ export function PortfolioNav({ name, items }: PortfolioNavProps) {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="mt-2 flex max-h-[70vh] flex-col gap-1 overflow-y-auto rounded-xl p-3 lg:hidden"
+            className="mt-2 flex max-h-[70vh] flex-col gap-1 overflow-y-auto rounded-xl p-3 backdrop-blur-xl lg:hidden"
             style={{
-              background: "rgba(238,242,248,0.98)",
+              background: "rgba(21,5,5,0.96)",
               border: "1px solid var(--border)",
-              boxShadow: "0 8px 28px rgba(10,15,24,0.1)",
+              boxShadow: "0 8px 28px rgba(0,0,0,0.5)",
             }}
           >
             {items.map((item) => (

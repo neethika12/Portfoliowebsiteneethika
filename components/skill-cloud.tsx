@@ -10,13 +10,9 @@ type SkillCloudProps = {
 export function SkillCloud({ title, skills }: SkillCloudProps) {
   return (
     <article
-      className="rounded-2xl p-5"
-      style={{ border: "1px solid var(--border)", background: "var(--white)" }}
+      className="paper-card rounded-2xl p-5"
     >
-      <h4
-        className="text-xs font-semibold uppercase tracking-wider"
-        style={{ color: "var(--ink-3)" }}
-      >
+      <h4 className="mono-label" style={{ color: "var(--synapse-glow)" }}>
         {title}
       </h4>
       <div className="mt-4 flex flex-wrap gap-2">

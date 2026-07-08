@@ -1,41 +1,54 @@
 <svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="700" rx="36" fill="url(#bg)"/>
-  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#0F172A" fill-opacity="0.78" stroke="#334155" stroke-width="2"/>
+  <circle cx="1080" cy="120" r="180" fill="url(#glow1)" fill-opacity="0.55"/>
+  <circle cx="90" cy="600" r="200" fill="url(#glow2)" fill-opacity="0.5"/>
+  <rect x="88" y="92" width="1024" height="516" rx="28" fill="#171256" fill-opacity="0.72" stroke="#3B3670" stroke-width="2"/>
 
-  <text x="136" y="168" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">
-    MercatoCloud
+  <text x="136" y="168" fill="#F5F3FF" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">
+    CloudPulse AI
   </text>
-  <text x="136" y="208" fill="#C4B5FD" font-family="Arial, Helvetica, sans-serif" font-size="24">
-    Multi-Vendor E-Commerce SaaS
-  </text>
-
-  <rect x="136" y="256" width="296" height="86" rx="16" fill="#312E81" fill-opacity="0.45" stroke="#A78BFA"/>
-  <text x="170" y="309" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">
-    8-10 Vendors
+  <text x="136" y="208" fill="#D8F24C" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">
+    Intelligent Cloud Cost &amp; Ops Platform
   </text>
 
-  <rect x="456" y="256" width="296" height="86" rx="16" fill="#0C4A6E" fill-opacity="0.5" stroke="#38BDF8"/>
-  <text x="488" y="309" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">
-    200+ Products
+  <rect x="136" y="256" width="270" height="86" rx="16" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="164" y="309" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">
+    RAG Q&amp;A
   </text>
 
-  <rect x="776" y="256" width="266" height="86" rx="16" fill="#065F46" fill-opacity="0.5" stroke="#34D399"/>
-  <text x="804" y="309" fill="#D1FAE5" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">
-    -30% Latency
+  <rect x="430" y="256" width="322" height="86" rx="16" fill="#D8F24C" fill-opacity="0.22" stroke="#D8F24C"/>
+  <text x="458" y="309" fill="#F3FBC9" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">
+    Anomaly Alerts
   </text>
 
-  <rect x="180" y="388" width="840" height="154" rx="22" fill="#111827" stroke="#475569"/>
-  <text x="226" y="448" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">
-    JWT RBAC + Product APIs + Stripe Checkout
+  <rect x="776" y="256" width="266" height="86" rx="16" fill="#372FE0" fill-opacity="0.35" stroke="#8B85F0"/>
+  <text x="804" y="309" fill="#EDE9FE" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">
+    Terraform + ECS
   </text>
-  <text x="226" y="492" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="24">
-    React + Node.js + MongoDB + Docker
+
+  <rect x="136" y="380" width="928" height="162" rx="22" fill="#0F0B33" stroke="#3B3670"/>
+  <text x="176" y="434" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+    LangChain + pgvector RAG over live AWS cost data
+  </text>
+  <text x="176" y="470" fill="#B7B2E8" font-family="Arial, Helvetica, sans-serif" font-size="22">
+    Isolation Forest anomaly detection with LLM Slack alerts
+  </text>
+  <text x="176" y="504" fill="#D8F24C" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600">
+    FastAPI · React/TypeScript · PostgreSQL · AWS ECS · Docker
   </text>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1120"/>
-      <stop offset="1" stop-color="#020617"/>
+      <stop stop-color="#171256"/>
+      <stop offset="1" stop-color="#0B0824"/>
     </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1080 120) rotate(90) scale(180)">
+      <stop stop-color="#372FE0"/>
+      <stop offset="1" stop-color="#372FE0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(90 600) rotate(90) scale(200)">
+      <stop stop-color="#D8F24C"/>
+      <stop offset="1" stop-color="#D8F24C" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 </svg>
